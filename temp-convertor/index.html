@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌡️ Temperature Converter Pro</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+        <!-- Animated Background -->
+        <div class="bg-animation">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+
+        <!-- Main Card -->
+        <div class="converter-card glass">
+
+            <!-- Header -->
+            <header>
+                <div class="header-icon">
+                    <i class="fas fa-temperature-high"></i>
+                </div>
+                <h1>Temperature <span>Converter</span></h1>
+                <p class="subtitle">Real-time conversion between scales</p>
+            </header>
+
+            <!-- Temperature Visualization -->
+            <div class="thermometer-container">
+                <div class="thermometer">
+                    <div class="thermometer-track">
+                        <div class="thermometer-fill" id="thermometer-fill"></div>
+                        <div class="thermometer-bulb">
+                            <div class="thermometer-bulb-fill" id="bulb-fill"></div>
+                        </div>
+                    </div>
+                    <div class="thermometer-labels">
+                        <span>100°C</span>
+                        <span>50°C</span>
+                        <span>0°C</span>
+                        <span>-50°C</span>
+                        <span>-100°C</span>
+                    </div>
+                </div>
+                <div class="temp-display" id="temp-display">
+                    <span class="temp-number" id="display-temp">--</span>
+                    <span class="temp-unit" id="display-unit">°C</span>
+                </div>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="temp-input">
+                        <i class="fas fa-pen"></i> Enter Value
+                    </label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="temp-input" 
+                            placeholder="e.g., 25, -10, 98.6"
+                            autofocus
+                        />
+                        <span class="input-icon"><i class="fas fa-thermometer-half"></i></span>
+                    </div>
+                    <div class="error-message" id="error-message">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span id="error-text">Please enter a valid number</span>
+                    </div>
+                </div>
+
+                <!-- Unit Selection -->
+                <div class="unit-selection">
+                    <label><i class="fas fa-arrows-alt-h"></i> Select Unit</label>
+                    <div class="radio-group" id="unit-selector">
+                        <label class="radio-option">
+                            <input type="radio" name="unit" value="celsius" checked />
+                            <span class="radio-label">
+                                <i class="fas fa-thermometer-half"></i> °C
+                            </span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="unit" value="fahrenheit" />
+                            <span class="radio-label">
+                                <i class="fas fa-thermometer-half"></i> °F
+                            </span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="unit" value="kelvin" />
+                            <span class="radio-label">
+                                <i class="fas fa-thermometer-half"></i> K
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Convert Button -->
+                <button id="convert-btn">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Convert Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Results -->
+            <div class="results" id="results">
+                <div class="result-item" id="result-celsius">
+                    <div class="result-icon"><i class="fas fa-snowflake"></i></div>
+                    <span class="result-label">Celsius</span>
+                    <span class="result-value" id="celsius-value">--</span>
+                    <span class="result-unit">°C</span>
+                </div>
+                <div class="result-item" id="result-fahrenheit">
+                    <div class="result-icon"><i class="fas fa-fire"></i></div>
+                    <span class="result-label">Fahrenheit</span>
+                    <span class="result-value" id="fahrenheit-value">--</span>
+                    <span class="result-unit">°F</span>
+                </div>
+                <div class="result-item" id="result-kelvin">
+                    <div class="result-icon"><i class="fas fa-atom"></i></div>
+                    <span class="result-label">Kelvin</span>
+                    <span class="result-value" id="kelvin-value">--</span>
+                    <span class="result-unit">K</span>
+                </div>
+            </div>
+
+            <!-- Footer Info -->
+            <div class="converter-footer">
+                <div class="info-badge">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Absolute zero: -273.15°C | -459.67°F | 0 K</span>
+                </div>
+                <div class="color-indicator" id="color-indicator">
+                    <span class="dot"></span>
+                    <span id="temp-status">Enter a temperature</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
