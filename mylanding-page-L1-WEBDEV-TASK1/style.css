@@ -1,0 +1,322 @@
+/* ---------- COFFEE SHOP COLOR PALETTE ---------- */
+/* Dark Brown: #3E2723, Primary Brown: #6F4E37, 
+   Latte Accent: #D4A373, Light Cream: #FDF6E3, 
+   White: #FFFFFF, Body Text: #2C2C2C */
+
+/* ---------- RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #FDF6E3;
+    color: #2C2C2C;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- TYPOGRAPHY (2 distinct sizes) ---------- */
+h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #3E2723;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #3E2723;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #6F4E37;
+}
+
+p, li, a {
+    font-size: 1.1rem;
+}
+
+/* ---------- STICKY NAVIGATION ---------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 16px 20px;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #6F4E37;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3E2723;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #D4A373;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+    padding: 80px 20px 100px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FDF6E3 100%);
+}
+
+.hero-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1 1 400px;
+}
+
+.hero-text h1 {
+    color: #3E2723;
+}
+
+.subheadline {
+    font-size: 1.3rem;
+    color: #6F4E37;
+    margin: 15px 0 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #6F4E37;
+    color: #FFFFFF;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(111, 78, 55, 0.3);
+}
+
+.cta-button:hover {
+    background: #3E2723;
+    transform: scale(1.03);
+}
+
+.hero-image {
+    flex: 1 1 400px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- FEATURES SECTION ---------- */
+.features {
+    padding: 80px 20px;
+    background: #FFFFFF;
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.feature-card {
+    flex: 1 1 280px;
+    background: #FDF6E3;
+    padding: 35px 25px;
+    border-radius: 16px;
+    text-align: center;
+    border-bottom: 4px solid #D4A373;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 30px rgba(111, 78, 55, 0.12);
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #6F4E37;
+}
+
+.feature-card p {
+    color: #4A4A4A;
+}
+
+/* ---------- TESTIMONIALS SECTION ---------- */
+.testimonials {
+    padding: 80px 20px;
+    background: #FDF6E3;
+}
+
+.testimonial-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+blockquote {
+    flex: 1 1 350px;
+    background: #FFFFFF;
+    padding: 35px 30px;
+    border-radius: 16px;
+    border-left: 6px solid #D4A373;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+blockquote p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #2C2C2C;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 600;
+    color: #6F4E37;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: #3E2723;
+    color: #FDF6E3;
+    padding: 40px 20px;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer p {
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    color: #FDF6E3;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #D4A373;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .feature-grid,
+    .testimonial-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card,
+    blockquote {
+        flex: 1 1 100%;
+        max-width: 450px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .cta-button {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+    .nav-links {
+        gap: 12px;
+    }
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+}
